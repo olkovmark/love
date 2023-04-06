@@ -20,6 +20,7 @@
   opacity: 0.85;
   font-size: 30px;
   color: darkred;
+  text-align: center;
 }
 .card_conteiner {
   width: 0;
@@ -36,12 +37,13 @@
 }
 
 .card {
+  --w: 0;
   height: calc(var(--w) * 700);
   width: calc(var(--w) * 500);
 
   color: rgb(221, 221, 221);
-  text-shadow: 1px 0 1px var(--color), 0 1px 1px var(--color),
-    -1px 0 1px var(--color), 0 -1px 1px var(--color);
+  text-shadow: 0px 0 5px var(--color), 0 0px 5px var(--color),
+    -0px 0 5px var(--color), 0 -0px 5px var(--color);
 
   display: flex;
   flex-direction: column;
@@ -56,22 +58,12 @@
   border: 1px solid rgba(197, 197, 197, 1);
 
   border-radius: 24px;
-}
-.card:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  border-radius: 24px;
-  background-image: var(--url);
+
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-  opacity: 0.85;
+  opacity: 0.9;
+  transition: 0.5s;
 }
 
 .card_title {
@@ -82,7 +74,7 @@
 .card_disc {
   text-align: center;
   width: 100%;
-  font-size: 18px;
+  font-size: 30px;
   z-index: 1;
 }
 
@@ -114,7 +106,7 @@
 
 @media (max-width: 600px) {
   .header {
-    font-size: 25px;
+    font-size: 20px;
   }
   .card {
     height: calc(var(--w) * 500);
